@@ -1,5 +1,19 @@
 # Pdfbix - Convert HTML & URL to High Quality PDF
 
+<div align="center">
+<img src="https://pdfbix.s3.ap-south-1.amazonaws.com/pdfbix-logo-750x250.png" width="350" height="auto"/>
+</div>
+
+<div align="center">
+
+[![NPM version](https://img.shields.io/npm/v/pdfbix.svg?label=version)](https://www.npmjs.com/package/pdfbix)
+[![NPM Licence](https://img.shields.io/npm/l/pdfbix)](https://www.npmjs.com/package/pdfbix)
+[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/uibix/pdfbix)](https://www.npmjs.com/package/pdfbix)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
+[![NPM downloads](https://img.shields.io/npm/dt/pdfbix)](https://www.npmjs.com/package/pdfbix)
+
+</div>
+
 Nodejs client SDK for [Pdfbix](https://www.pdfbix.com/)
 
 Pdfbix is one of the cheapest tool to convert your HTML or URL to pdf. You can generate pdf at the cost of setting up your own server. It's a tool developed by developers for developer so that they can focus on business logic & forget about all the hassle of maintaing & scaling servers for generating pdf.
@@ -123,16 +137,17 @@ If `isBase64Encoded` is true then `content` will contain base64 string represent
 
 #### Possible Error Code
 
-| Code                 | Status Code | Description                                                                        |
-| :------------------- | :---------: | ---------------------------------------------------------------------------------- |
-| ERR_INVALID_TOKEN    |     401     | When token you're passing is not correct                                           |
-| BAD_REQUEST_DATA     |     400     | Sent for any request which server can't parse or any required parameter is missing |
-| NO_AUTH_KEY          |     411     | When you're not passing any authKey while initializing SDK                         |
-| NEGATIVE_BALANCE     |     415     | Balance is negative in your wallet, Please recharge                                |
-| INACTIVE_ACCOUNT     |     416     | Account is inactive or suspended by Admin                                          |
-| BLOCKED_ACCOUNT      |     417     | Account is blocked by Admin                                                        |
-| INACTIVE_APPLICATION |     418     | Application is inactive or suspended by Admin                                      |
-| BLOCKED_APPLICATION  |     419     | Application is blocked by Admin                                                    |
-| NO_URL_PROVIDED      |     421     | You forget to pass url to function `convertUrlToPdf`                               |
-| NO_HTML_PROVIDED     |     422     | You forget to pass HTML String to function `convertHtmlToPdf`                      |
-| EMAIL_NOT_VERIFIED   |     428     | Email is not verified. Please verify your email                                    |
+| Code                  | Status Code | Description                                                                        |
+| :-------------------- | :---------: | ---------------------------------------------------------------------------------- |
+| ERR_INVALID_TOKEN     |     401     | When token you're passing is not correct                                           |
+| BAD_REQUEST_DATA      |     400     | Sent for any request which server can't parse or any required parameter is missing |
+| NO_AUTH_KEY           |     411     | When you're not passing any authKey while initializing SDK                         |
+| NEGATIVE_BALANCE      |     415     | Balance is negative in your wallet, Please recharge                                |
+| INACTIVE_ACCOUNT      |     416     | Account is inactive or suspended by Admin                                          |
+| BLOCKED_ACCOUNT       |     417     | Account is blocked by Admin                                                        |
+| INACTIVE_APPLICATION  |     418     | Application is inactive or suspended by Admin                                      |
+| BLOCKED_APPLICATION   |     419     | Application is blocked by Admin                                                    |
+| NO_URL_PROVIDED       |     421     | You forget to pass url to function `convertUrlToPdf`                               |
+| NO_HTML_PROVIDED      |     422     | You forget to pass HTML String to function `convertHtmlToPdf`                      |
+| NO_STORAGE_CONFIGURED |     427     | You need to configure your custom storage first (currently S3 supported)           |
+| EMAIL_NOT_VERIFIED    |     428     | Email is not verified. Please verify your email                                    |
