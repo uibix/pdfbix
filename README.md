@@ -1,5 +1,11 @@
 # Pdfbix - Convert HTML & URL to High Quality PDF
 
+[![NPM downloads](https://img.shields.io/npm/dt/pdfbix.svg?style=flat)](https://www.npmjs.com/package/pdfbix)
+[![NPM version](https://img.shields.io/npm/v/pdfbix.svg?style=flat&label=version)](https://www.npmjs.com/package/pdfbix)
+[![NPM Licence](https://img.shields.io/npm/l/pdfbix.svg?style=flat)](https://www.npmjs.com/package/pdfbix)
+[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/pdfbix.svg?style=flat)](https://www.npmjs.com/package/pdfbix)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://standardjs.com/)
+
 Nodejs client SDK for [Pdfbix](https://www.pdfbix.com/)
 
 Pdfbix is one of the cheapest tool to convert your HTML or URL to pdf. You can generate pdf at the cost of setting up your own server. It's a tool developed by developers for developer so that they can focus on business logic & forget about all the hassle of maintaing & scaling servers for generating pdf.

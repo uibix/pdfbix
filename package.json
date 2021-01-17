@@ -1,19 +1,19 @@
 {
   "name": "pdfbix",
-  "version": "1.0.0",
-  "description": "Client SDK to use pdfbix, an online pdf conversion service.",
+  "version": "0.0.1-beta",
+  "description": "Client SDK to use pdfbix, an online rest api pdf conversion service.",
   "main": "src/index.js",
   "scripts": {
     "lint": "standard --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sumitsk20/pdfbix.git"
+    "url": "git+https://github.com/uibix/pdfbix.git"
   },
   "author": "Uibix",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/sumitsk20/pdfbix/issues"
+    "url": "https://github.com/uibix/pdfbix/issues"
   },
   "keywords": [
     "pdf",
