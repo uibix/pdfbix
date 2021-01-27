@@ -1,7 +1,7 @@
 {
   "name": "pdfbix",
-  "version": "0.0.1-beta",
-  "description": "Client SDK to use pdfbix, an online rest api pdf conversion service.",
+  "version": "1.0.0",
+  "description": "Client SDK to use pdfbix, an online scalable rest api pdf conversion.",
   "main": "src/index.js",
   "scripts": {
     "lint": "standard --fix"
@@ -19,15 +19,17 @@
     "pdf",
     "html",
     "url",
-    "online-pdf",
-    "pdf-generation",
+    "online pdf",
+    "pdf generation",
     "pdf converter",
     "html to pdf converter",
-    "html-to-pdf",
-    "url-to-pdf",
-    "headless-chrome",
+    "html to pdf",
+    "url to pdf",
+    "headless chrome",
     "convert html to pdf",
-    "convert url to pdf"
+    "convert url to pdf",
+    "html to pdf api",
+    "puppeteer"
   ],
   "homepage": "https://github.com/uibix/pdfbix#readme",
   "devDependencies": {

@@ -67,7 +67,7 @@ class Pdfbix {
 
   async convertHtmlToPdf (html = '', args = {}) {
     html = String(html)
-    if (html.length < 1) throw new errorCodes.NO_URL_PROVIDED()
+    if (html.length < 1) throw new errorCodes.NO_HTML_PROVIDED()
     const postData = JSON.stringify({
       html: html,
       pdfOpts: args.pdfOpts,

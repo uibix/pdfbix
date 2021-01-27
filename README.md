@@ -151,3 +151,9 @@ If `isBase64Encoded` is true then `content` will contain base64 string represent
 | NO_HTML_PROVIDED      |     422     | You forget to pass HTML String to function `convertHtmlToPdf`                      |
 | NO_STORAGE_CONFIGURED |     427     | You need to configure your custom storage first (currently S3 supported)           |
 | EMAIL_NOT_VERIFIED    |     428     | Email is not verified. Please verify your email                                    |
+
+## Enable custom s3 Storage
+
+It's very easy to confugure your own s3 bucket, you just need to generate your [aws programmatic keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys). Its recommended to create a separate user for your project with right S3 programmatic access.
+
+After you have generated your keys you can configure them on our Customer panel under **Account -> Custom Storage**. Your keys are stored in encrypted format, So you don't have to worry about any privacy loss.
