@@ -89,12 +89,13 @@ try {
 
 #### All options that can be passed in `args`
 
-| Key                 |  Value  | Required/Optional |            Default            | Description                                                                         |
-| :------------------ | :-----: | :---------------: | :---------------------------: | ----------------------------------------------------------------------------------- |
-| toUrl               | Boolean |     optional      |             true              | `true`: return a link to download pdf; `false`: return base64 representation of pdf |
-| fileName            | String  |     optional      | {requestId}_{currentDatetime} | Custom file name given to file                                                      |
-| enableCustomStorage | Boolean |     optional      |             false             | If enabled all files will be saved to configured s3 bucket in dashboard             |
-| **pdfOpts**         | Object  |     optional      |              {}               | Puppeteer options that can be passed, to configure final pdf                        |
+| Key                 |  Value  | Required/Optional |            Default            | Description                                                                           |
+| :------------------ | :-----: | :---------------: | :---------------------------: | ------------------------------------------------------------------------------------- |
+| toUrl               | Boolean |     optional      |             true              | `true`: return a link to download pdf; `false`: return base64 representation of pdf   |
+| fileName            | String  |     optional      | {requestId}_{currentDatetime} | Custom file name given to file                                                        |
+| enableCustomStorage | Boolean |     optional      |             false             | If enabled all files will be saved to configured s3 bucket in dashboard               |
+| customStorage       | String  |     optional      |                               | Will only work if `enableCustomStorage` is enabled. Valid options are `aws` and `gcp` |
+| **pdfOpts**         | Object  |     optional      |              {}               | Puppeteer options that can be passed, to configure final pdf                          |
 
 All options that can be passed into `pdfOpts` [can be found here](https://pptr.dev/#?product=Puppeteer&version=main&show=api-pagepdfoptions)
 
@@ -152,8 +153,16 @@ If `isBase64Encoded` is true then `content` will contain base64 string represent
 | NO_STORAGE_CONFIGURED |     427     | You need to configure your custom storage first (currently S3 supported)           |
 | EMAIL_NOT_VERIFIED    |     428     | Email is not verified. Please verify your email                                    |
 
-## Enable custom s3 Storage
+## Custom Storage Configuration
+
+### Enable s3 Storage
 
 It's very easy to confugure your own s3 bucket, you just need to generate your [aws programmatic keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys). Its recommended to create a separate user for your project with right S3 programmatic access.
 
-After you have generated your keys you can configure them on our Customer panel under **Account -> Custom Storage**. Your keys are stored in encrypted format, So you don't have to worry about any privacy loss.
+### Enable google cloud Storage
+
+You need to create bucket in GCP using console or cli. To do so, you can follow the steps mentioned [here](https://cloud.google.com/storage/docs/quickstart-console).
+
+To enable upload using code you need to genreate credentials or a role with `storage.objects.create` permission. You can follow the [steps in this guide](https://cloud.google.com/storage/docs/uploading-objects) to upload objects into bucket.
+
+***Note:*** After you have generated your keys you can configure them on our Customer panel under **Account -> Custom Storage**. Your keys are stored in encrypted format, So you don't have to worry about any privacy loss.

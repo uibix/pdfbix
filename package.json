@@ -1,6 +1,6 @@
 {
   "name": "pdfbix",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Client SDK to use pdfbix, an online scalable rest api pdf conversion.",
   "main": "src/index.js",
   "scripts": {
@@ -16,12 +16,6 @@
     "url": "https://github.com/uibix/pdfbix/issues"
   },
   "keywords": [
-    "pdf",
-    "html",
-    "url",
-    "online pdf",
-    "pdf generation",
-    "pdf converter",
     "html to pdf converter",
     "html to pdf",
     "url to pdf",
@@ -29,7 +23,15 @@
     "convert html to pdf",
     "convert url to pdf",
     "html to pdf api",
-    "puppeteer"
+    "puppeteer pdf",
+    "html tmplate to pdf",
+    "api to pdf",
+    "pdf",
+    "html",
+    "url",
+    "online pdf",
+    "pdf generation",
+    "pdf converter"
   ],
   "homepage": "https://github.com/uibix/pdfbix#readme",
   "devDependencies": {

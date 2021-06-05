@@ -33,6 +33,13 @@ class Pdfbix {
    * Convert provided URL to PDF
    * @param {string} url URL that will be fetched & converted to pdf
    * @param {object, optional} args
+   * {
+   *    pdfOpts: {},
+   *    fileName: '',
+   *    toUrl: false,
+   *    enableCustomStorage: true,
+   *    customStorage: 'aws
+   * }
    * Return promise
    */
 
@@ -41,9 +48,7 @@ class Pdfbix {
     if (url.length < 1 || !(url.startsWith('http://') || (url.startsWith('https://')))) throw new errorCodes.NO_URL_PROVIDED()
     const postData = JSON.stringify({
       url: url,
-      pdfOpts: args.pdfOpts,
-      fileName: args.fileName,
-      toUrl: args.toUrl
+      ...args
     })
     const options = {
       url: this.APIs.convertUrlToPdf.url,
@@ -51,11 +56,12 @@ class Pdfbix {
       headers: {
         authorization: this.authKey,
         'Content-Type': 'application/json',
-        'Content-Length': postData.length
+        'Content-Length': postData.length,
+        'User-Agent': `pdfbix-node@${this.apiVersion}`
       },
       postData: postData
     }
-    return await makeRequest(options)
+    return makeRequest(options)
   }
 
   /**
@@ -70,9 +76,7 @@ class Pdfbix {
     if (html.length < 1) throw new errorCodes.NO_HTML_PROVIDED()
     const postData = JSON.stringify({
       html: html,
-      pdfOpts: args.pdfOpts,
-      fileName: args.fileName,
-      toUrl: args.toUrl
+      ...args
     })
     const options = {
       url: this.APIs.convertHtmlToPdf.url,
@@ -80,11 +84,12 @@ class Pdfbix {
       headers: {
         authorization: this.authKey,
         'Content-Type': 'application/json',
-        'Content-Length': postData.length
+        'Content-Length': postData.length,
+        'User-Agent': `pdfbix-node@${this.apiVersion}`
       },
       postData: postData
     }
-    return await makeRequest(options)
+    return makeRequest(options)
   }
 }
 
